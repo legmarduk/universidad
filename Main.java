@@ -4,7 +4,7 @@ package Clases;
 import java.util.Scanner;
 
 import java.util.Random;
-
+//estoy trabajando en tu main
 public class Main {
 
 	private static Random NumeroRandom = new Random();
@@ -43,12 +43,12 @@ public class Main {
 				
 				case 1: //buscar
 				
-				if(!ABin.EstaVacÌo()){
+				if(!ABin.EstaVac√≠o()){
 				   System.out.print("Ingresa El Valor A Buscar: ");
 				   bus=s.nextInt();
 					ABin.Buscar_Nodo(bus);
 					if(ABin.Buscar_Nodo(bus)==null){
-						System.out.println("No Existe El Nodo En El ¡rbol");
+						System.out.println("No Existe El Nodo En El √Årbol");
 					}
 					else{
 						System.out.println("Se Ha Encontrado El Nodo");			
@@ -58,7 +58,7 @@ public class Main {
 					 	break;
 				case 2://eliminar
                      
-					if(!ABin.EstaVacÌo()){
+					if(!ABin.EstaVac√≠o()){
 						System.out.println("Ingresa El Valor A Eliminar: ");
 						bus=s.nextInt();
 						if(!ABin.Eliminar_Nodo(bus)){
