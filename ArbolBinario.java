@@ -38,7 +38,7 @@ public class ArbolBinario {
 		}
 	}
 	
-	public boolean EstaVacío(){
+	public boolean EstaVacÃ­o(){
 		return Raiz==null;
 	}
 	
@@ -208,10 +208,27 @@ public class ArbolBinario {
 		}
 	}
 		
-	
-	
-	
-	
+		public void Amplitud(Nodo a) 
+		{
+		Nodo aux; 
+		if (a != null) 
+		{
+			Cola.push(a); 
+				while (Cola.isEmpty()==false) 
+					{
+						ColaAux.push(aux= Cola.pop()); 
+							if (aux.HijoIzquierdo != null) 
+							{
+							            	Cola.push(aux.HijoIzquierdo); 
+										}
+										if (aux.HijoDerecho!= null) 
+										{
+											Cola.push(aux.HijoDerecho); 
+										}
+					}
+		                      	System.out.print(ColaAux);
+			}
+		}
 }
 
 
