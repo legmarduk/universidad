@@ -208,27 +208,31 @@ public class ArbolBinario {
 		}
 	}
 		
-		public void Amplitud(Nodo a) 
-		{
-		Nodo aux; 
-		if (a != null) 
-		{
-			Cola.push(a); 
-				while (Cola.isEmpty()==false) 
-					{
-						ColaAux.push(aux= Cola.pop()); 
-							if (aux.HijoIzquierdo != null) 
-							{
-							            	Cola.push(aux.HijoIzquierdo); 
-										}
-										if (aux.HijoDerecho!= null) 
-										{
-											Cola.push(aux.HijoDerecho); 
-										}
-					}
-		                      	System.out.print(ColaAux);
-			}
-		}
+	 public void Amplitud(Nodo a){
+		  
+		  Nodo Aux;
+		  LinkedList Cola = new LinkedList<Nodo>();
+		  LinkedList ColaAux = new LinkedList<Nodo>();
+		  if(a!=null){
+		   Cola.offer(a);
+		   while(!Cola.isEmpty()){
+		    Aux=(Nodo) Cola.poll();
+		    ColaAux.offer(Aux.Dato);
+		    if(Aux.HijoIzquierdo!=null){
+		     Cola.offer(Aux.HijoIzquierdo);
+		    }
+		    if(Aux.HijoDerecho!=null){
+		     Cola.offer(Aux.HijoDerecho);
+		    }
+		   }
+		   while(!ColaAux.isEmpty()){
+		    System.out.println(ColaAux.peekFirst());
+		    ColaAux.poll();
+		    //System.out.print("+ "+ColaAux.getFirst());
+		   }
+		   
+		  }
+		 }
 }
 
 
